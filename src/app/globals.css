@@ -1,26 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
+
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --color-brand-black: #000000;
+  --color-brand-charcoal: #111111;
+  --color-brand-gold: #D4AF37;
+  --color-brand-gold-dark: #B5952F;
+  --color-brand-gray: #333333;
+  --color-brand-light-gray: #EEEEEE;
+  --color-brand-white: #FFFFFF;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  background-color: var(--color-brand-black);
+  color: var(--color-brand-white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Enforce custom cursor by hiding default cursor everywhere */
+*, *::before, *::after, button, a {
+  cursor: none !important;
+}
+
+h1, h2, h3, h4, h5, h6, .font-serif {
+  font-family: var(--font-serif);
+}
+
+/* Beautiful elegant typography */
+.display {
+  font-family: var(--font-serif);
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.subheading {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-brand-gold);
+}
+
+/* Elegant Buttons */
+.btn-primary {
+  @apply inline-flex items-center justify-center px-8 py-4 bg-[#D4AF37] text-black font-semibold text-sm tracking-wide transition-all duration-300 hover:bg-[#F2D06B];
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center px-8 py-4 border border-[#333333] text-white font-semibold text-sm tracking-wide transition-all duration-300 hover:border-white hover:bg-white hover:text-black;
+}
+
+/* Minimalist borders */
+.divider {
+  @apply w-full h-px bg-[#333333];
+}
+
+.vertical-divider {
+  @apply w-px h-full bg-[#333333];
+}
+
+/* Base layouts */
+.section-padding {
+  @apply py-24 lg:py-32;
+}
+
+/* Custom Text Gradient if needed, though Minerva relies heavily on solid colors */
+.text-gold {
+  color: #D4AF37;
+}
+
+::selection {
+  background: #D4AF37;
+  color: #000;
 }
