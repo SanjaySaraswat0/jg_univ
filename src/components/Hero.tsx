@@ -25,7 +25,7 @@ export default function Hero() {
 
   const itemVars = {
     hidden: { opacity: 0, y: 40, filter: "blur(10px)" },
-    show: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0.8, ease: "easeOut" } }
+    show: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0.8, ease: "easeOut" as const } }
   };
 
   return (
@@ -82,7 +82,7 @@ export default function Hero() {
         <motion.div 
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, delay: 1, ease: "easeOut" }}
+          transition={{ duration: 1, delay: 1, ease: "easeOut" as const }}
           className="w-full lg:w-72 border-l border-[#333333] pl-8 pb-4"
         >
           <div className="mb-10 group cursor-default">
