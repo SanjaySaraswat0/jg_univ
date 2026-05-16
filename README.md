@@ -1,6 +1,6 @@
 # JG University — Premium Landing Page Redesign
 
-A complete redesign of the JG University landing page, conceptualized and developed as a high-end, prestigious academic experience. Inspired by top-tier global universities (like Minerva), this landing page leverages modern web technologies to deliver an immersive, butter-smooth, and visually striking user experience.
+A complete redesign of the JG University landing page, conceptualized and developed as a high-end, prestigious academic experience. this landing page leverages modern web technologies to deliver an immersive, butter-smooth, and visually striking user experience.
 
 ---
 
@@ -80,4 +80,4 @@ The design pivots away from standard "tech-heavy glassmorphism" to a much more *
 
 ---
 
-**Developed for the ML/Frontend Internship Assignment.**
+
